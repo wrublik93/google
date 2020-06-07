@@ -5,6 +5,7 @@ const searchInput = document.querySelector('.search-input');
 const inputClearSpan = document.querySelector('.input-clear-span');
 const inputClearIcon = document.querySelector('.input-clear-icon');
 const googleSearchFormContainer = document.querySelector('.google-search-form-container');
+const voiceIcon = document.querySelector('.voice-icon');
 
 menuSettingsWindow.addEventListener('click', () => {
     if (menuSettings.classList.contains('hidden')) {
@@ -33,14 +34,35 @@ searchInput.addEventListener('input', (event) => {
         inputClearSpan.classList.add('hidden');
         inputClearIcon.classList.add('hidden');
     }
-})
+});
 
 inputClearIcon.addEventListener('click', () => {
     searchInput.value = '';
     searchInput.focus();
     inputClearSpan.classList.add('hidden');
     inputClearIcon.classList.add('hidden');
-})
+});
+
+voiceIcon.addEventListener('click', () => {
+    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = true;
+    recognition.start();
+    recognition.onresult = (event) => {
+        const transcript = Array.from(event.results)
+        .map((result) => result[0])
+        .map((result) => result.transcript)
+        .join('')
+        .toLowerCase();
+        if (event.results[0].isFinal) {
+            searchInput.value = transcript;
+        }
+    };
+    
+    recognition.onend = () => {
+        recognition.stop();
+    };
+});
 
 
 
