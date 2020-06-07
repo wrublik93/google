@@ -6,6 +6,7 @@ const inputClearSpan = document.querySelector('.input-clear-span');
 const inputClearIcon = document.querySelector('.input-clear-icon');
 const googleSearchFormContainer = document.querySelector('.google-search-form-container');
 const voiceIcon = document.querySelector('.voice-icon');
+const buttonLucky = document.querySelector('.button-lucky');
 
 menuSettingsWindow.addEventListener('click', () => {
     if (menuSettings.classList.contains('hidden')) {
@@ -64,5 +65,11 @@ voiceIcon.addEventListener('click', () => {
     };
 });
 
-
+buttonLucky.addEventListener('click', () => {
+    if(searchInput.value) {
+        window.location.href = `https://en.wikipedia.org/wiki/${searchInput.value}`;
+    } else {
+        window.location.href = `https://www.google.com/doodles/`;
+    }
+});
 
