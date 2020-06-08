@@ -7,6 +7,8 @@ const inputClearIcon = document.querySelector('.input-clear-icon');
 const googleSearchFormContainer = document.querySelector('.google-search-form-container');
 const voiceIcon = document.querySelector('.voice-icon');
 const buttonLucky = document.querySelector('.button-lucky');
+const googleAppsLink = document.querySelector('.google-apps-link');
+const googleAppsWindow = document.querySelector('.google-apps-window');
 
 menuSettingsWindow.addEventListener('click', () => {
     if (menuSettings.classList.contains('hidden')) {
@@ -19,6 +21,10 @@ menuSettingsWindow.addEventListener('click', () => {
 body.addEventListener('click', () => {
     if (!event.target.classList.contains('menu-settings-window')) {
         menuSettings.classList.add('hidden');
+    }
+
+    if (!event.target.classList.contains('google-apps-link')) {
+        googleAppsWindow.classList.add('hidden');
     }
 
     if (!event.target.classList.contains('focus')) {
@@ -73,3 +79,10 @@ buttonLucky.addEventListener('click', () => {
     }
 });
 
+googleAppsLink.addEventListener('click', () => {
+    if (googleAppsWindow.classList.contains('hidden')) {
+        googleAppsWindow.classList.remove('hidden');
+    } else {
+        googleAppsWindow.classList.add('hidden');
+    }
+})

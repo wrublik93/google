@@ -306,6 +306,161 @@ main {
     text-decoration: underline;
 }
 
+/*Google Apps Window*/
+
+.google-apps-window {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 11px;
+    bottom: 205px;
+    top: 59px;
+    right: 32px;
+    width: 326px;
+    padding: 10px 0;
+    position: absolute;
+    border-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    text-align: left;
+    overflow-y: scroll;
+}
+
+/*avatar*/
+
+.apps-avatar {
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-bottom: 7px;
+    display: block;
+    background-image: url(../img/avatar-icon.jpg);
+    background-size: 46px 46px;
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+}
+
+.apps-text-avatar {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-left: 36px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*Search*/
+
+.apps-search {
+    margin-top: 25px;
+    margin-left: 55px;
+    margin-bottom: 7px;
+    display: block;
+    background-image: url(../img/google-apps.png);
+    background-size: 64px 2824px;
+    background-position: -10px -147px;
+    height: 46px;
+    width: 46px;
+}
+
+.apps-text-search {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-left: 53px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*Maps*/
+
+.apps-maps {
+    margin-top: 25px;
+    margin-left: 54px;
+    margin-bottom: 7px;
+    display: block;
+    background-image: url(../img/google-apps.png);
+    background-size: 64px 2824px;
+    background-position: -10px -837px;
+    height: 46px;
+    width: 46px;
+}
+
+.apps-text-maps {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-left: 56px;
+    margin-top: 10px;
+}
+
+/*YouTube*/
+
+.apps-youtube {
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-bottom: 7px;
+    display: block;
+    background-image: url(../img/google-apps.png);
+    background-size: 64px 2824px;
+    background-position: -9px -1319px;
+    height: 46px;
+    width: 50px;
+}
+
+.apps-text-youtube {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-left: 33px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*Play*/
+
+.apps-play {
+    margin-top: 25px;
+    margin-left: 51px;
+    margin-bottom: 7px;
+    display: block;
+    background-image: url(../img/google-apps.png);
+    background-size: 64px 2824px;
+    background-position: -10px -215px;
+    height: 46px;
+    width: 46px;
+}
+
+.apps-text-play {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-left: 44px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*Gmail*/
+
+.apps-gmail {
+    margin-top: 28px;
+    margin-left: 52px;
+    margin-bottom: 7px;
+    display: block;
+    background-image: url(../img/google-apps.png);
+    background-size: 64px 2824px;
+    background-position: -10px -493px;
+    height: 46px;
+    width: 46px;
+}
+
+.apps-text-gmail {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-left: 56px;
+    margin-top: 10px;
+}
+
+.app:hover {
+    cursor: pointer;
+}
+
 /*Common*/
 
 .hidden {
